@@ -58,6 +58,7 @@ const Contact = () => {
         You can reach out to me on social media and explore my work:
       </h2>
       <SocialIcons />
+      <p className="text-2xl md:text-3xl xl:text-5xl">Let's Work Together</p>
       {/* <p className="mt-6 text-lg">
         Reminder: My speciality is on front-end, but I can also do backend very well. So,
         let's work together!
