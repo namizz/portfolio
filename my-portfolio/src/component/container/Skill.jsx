@@ -96,12 +96,14 @@ const Skill = () => {
             key={index}
             className="shadow-md border-2 border-[#00000048] border-double p-3 pt-2 flex-col rounded-2xl mx-4 my-6 border-b-0"
           >
-            <h3 className="text-xl font-bold mx-8 mb-3">{section.category}</h3>
+            <h3 className="text-xl font-extrabold mx-8 mb-3">
+              {section.category}
+            </h3>
             <div className="flex gap-6 flex-wrap mx-6">
               {section.items.map((skill, idx) => (
                 <div key={idx} className="text-center justify-center">
                   {skill.icon}
-                  <p className="font-light mt-1">{skill.name}</p>
+                  <p className="font-bold mt-1">{skill.name}</p>
                 </div>
               ))}
             </div>
