@@ -9,7 +9,7 @@ import Main from "../component/container/Home";
 
 export default function Home() {
   return (
-    <div className="">
+    <div className="bg-white">
       <div className="fixed bg-white w-full z-50 top-0">
         <NavBar />
       </div>
