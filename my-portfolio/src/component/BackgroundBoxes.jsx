@@ -26,6 +26,7 @@ export const BoxesCore = ({ className, ...rest }) => {
     <div
       style={{
         transform: `translate(-40%,-20%) skewX(-48deg) skewY(14deg) scale(0.675) rotate(0deg) translateZ(0)`,
+        width: "220%",
       }}
       className={cn(
         "absolute top-0 left-0 z-0 flex h-full w-full p-4",

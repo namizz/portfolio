@@ -5,15 +5,17 @@ import Contact from "../component/Contact";
 import Project from "../component/container/ProjectSection";
 import Main from "../component/container/Home";
 import Background from "../component/container/Background";
+import NavbarDemo from "../component/container/NavContainer";
 
 export default function Home() {
   return (
-    <div className="bg-white">
-      <div className="fixed bg-white w-full z-50 top-0">
-        <NavBar />
-      </div>
+    <div className="">
+      {/* <div className="fixed w-full z-50 top-0"> */}
+      <NavbarDemo />
+      {/* <NavBar /> */}
+
       <Background>
-        <div className="max-w-[1100px] w-full mx-auto my-10 mt-40 px-4 lg:px-6 xl:px-0">
+        <div className="max-w-[1100px] w-full mx-auto pb-10 pt-30 px-4 lg:px-6 xl:px-0">
           <div id="main">
             <Main />
           </div>
@@ -32,7 +34,9 @@ export default function Home() {
       <Background>
         <div className="max-w-[1100px] w-full mx-auto my-10 px-4 lg:px-6 xl:px-0">
           <Achivement />
-          <Contact />
+          <div id="contact">
+            <Contact />
+          </div>
         </div>
       </Background>
       {/* <Background /> */}
