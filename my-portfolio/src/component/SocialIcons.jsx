@@ -4,7 +4,7 @@ import { RiTelegram2Fill } from "react-icons/ri";
 
 const SocialIcons = () => {
   return (
-    <div className="flex-col space-x-4 text-xl my-auto">
+    <div className="relative z-10 flex-col space-x-4 text-xl my-auto">
       <a
         href="https://github.com/namizz"
         target="_blank"
@@ -26,7 +26,7 @@ const SocialIcons = () => {
         href="https://t.me/naomizerfu"
         target="_blank"
         rel="noopener noreferrer"
-        className="hover:text-sky-500 duration-200"
+        className="hover:text-sky-500  duration-200"
       >
         <RiTelegram2Fill size={40} />
       </a>

@@ -28,7 +28,7 @@ const MagicWand = () => {
         }}
         aria-label="Magic Wand"
       >
-        <img className="" src={image} alt="Magic Wand" />
+        <img className="relative z-10" src={image} alt="Magic Wand" />
       </button>
     </div>
   );

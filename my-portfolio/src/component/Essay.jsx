@@ -19,12 +19,12 @@ const Essay = () => {
       <p className={`${txt.className} text-xl xl:text-3xl`}>I'm</p>
       <div className={`${txt.className} inline-block`}>
         <p className="text-2xl md:text-3xl xl:text-4xl">Naomi Zerfu Shiferaw</p>
-        <p className="relative text-xs sm:text-sm text-right font-extralight -top-1 text-gray-800 opacity-60">
+        {/* <p className="relative text-xs sm:text-sm text-right font-extralight -top-1 text-gray-800 opacity-60">
           (you can call me Mr. Shiferaw)
-        </p>
+        </p> */}
       </div>
 
-      <p className="relative -top-3 text-base xl:text-lg">
+      <p className="-top-3 text-base xl:text-lg">
         A front-end web developer passionate about building attractive and
         interactive web experiences. I strive to deliver clean, complete work
         that ensures client satisfaction. With a keen eye for detail, I

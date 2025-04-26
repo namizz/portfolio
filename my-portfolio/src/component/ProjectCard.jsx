@@ -45,7 +45,9 @@ const ProjectCard = ({
   };
 
   return (
-    <div className={`border-1 p-1 pb-0 border-[#00000018] shadow-sm flex my-8`}>
+    <div
+      className={`relative z-10 bg-white opacity-80 border-1 p-1 pb-0 border-[#00000018] shadow-sm flex my-8`}
+    >
       <div>
         <img
           src={images[currentIndex]}
@@ -107,7 +109,7 @@ const Button = ({ buttonColor, name, link }) => {
   return (
     <a href={link} target="_blank" rel="noopener noreferrer">
       <button
-        className="mx-1 px-4 py-2 rounded text-white font-bold"
+        className="relative z-10 mx-1 px-4 py-2 rounded text-white font-bold"
         style={{ backgroundColor: buttonColor }}
       >
         {name}

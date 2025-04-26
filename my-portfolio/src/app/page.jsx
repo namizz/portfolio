@@ -1,11 +1,10 @@
 import NavBar from "../component/NavBar";
 import Achivement from "../component/container/Achivement";
 import Skill from "../component/container/Skill";
-import Timeline from "../component/Achivment";
 import Contact from "../component/Contact";
 import Project from "../component/container/ProjectSection";
-import { color } from "motion/react";
 import Main from "../component/container/Home";
+import Background from "../component/container/Background";
 
 export default function Home() {
   return (
@@ -13,21 +12,30 @@ export default function Home() {
       <div className="fixed bg-white w-full z-50 top-0">
         <NavBar />
       </div>
-      <div className="px-4 lg:px-6 xl:px-0 mt-40">
-        <div className="max-w-[1100px] w-full mx-auto my-10 ">
+      <Background>
+        <div className="max-w-[1100px] w-full mx-auto my-10 mt-40 px-4 lg:px-6 xl:px-0">
           <div id="main">
             <Main />
           </div>
           <div id="project">
             <Project />
           </div>
+        </div>
+      </Background>
+      <Background>
+        <div className="max-w-[1100px] w-full mx-auto my-10 px-4 lg:px-6 xl:px-0">
           <div id="skills">
             <Skill />
           </div>
+        </div>
+      </Background>
+      <Background>
+        <div className="max-w-[1100px] w-full mx-auto my-10 px-4 lg:px-6 xl:px-0">
           <Achivement />
           <Contact />
         </div>
-      </div>
+      </Background>
+      {/* <Background /> */}
     </div>
   );
 }
