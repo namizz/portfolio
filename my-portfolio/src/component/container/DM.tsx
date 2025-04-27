@@ -96,7 +96,7 @@ const ContactSection = () => {
       <CardHeader>
         <CardTitle className="text-slate-600">Contact me Here</CardTitle>
         <CardDescription className="text-gray-800 dark:text-gray-400">
-          I'll get back to you as soon as possible.
+          I&apos;ll get back to you as soon as possible.
         </CardDescription>
       </CardHeader>
       <form onSubmit={handleSubmit} className="relative z-10">
