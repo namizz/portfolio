@@ -39,25 +39,25 @@ const ContactSection = () => {
 
   // Handle form submission
   const handleSubmit = async (e: React.FormEvent) => {
-    // e.preventDefault();
-    // setIsSubmitting(true);
-    // setFeedback("");
-    // setFeedbackType("");
-    // // Basic validation
-    // if (!formData.name || !formData.email || !formData.message) {
-    //   setFeedback("Please fill in all required fields.");
-    //   setFeedbackType("error");
-    //   setIsSubmitting(false);
-    //   return;
-    // }
-    // // Email validation
-    // const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    // if (!emailRegex.test(formData.email)) {
-    //   setFeedback("Please enter a valid email address.");
-    //   setFeedbackType("error");
-    //   setIsSubmitting(false);
-    //   return;
-    // }
+    e.preventDefault();
+    setIsSubmitting(true);
+    setFeedback("");
+    setFeedbackType("");
+    // Basic validation
+    if (!formData.name || !formData.email || !formData.message) {
+      setFeedback("Please fill in all required fields.");
+      setFeedbackType("error");
+      setIsSubmitting(false);
+      return;
+    }
+    // Email validation
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(formData.email)) {
+      setFeedback("Please enter a valid email address.");
+      setFeedbackType("error");
+      setIsSubmitting(false);
+      return;
+    }
     // try {
     //   const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/send`, {
     //     method: "POST",
