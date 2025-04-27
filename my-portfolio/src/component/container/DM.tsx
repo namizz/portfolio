@@ -39,62 +39,56 @@ const ContactSection = () => {
 
   // Handle form submission
   const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    setIsSubmitting(true);
-    setFeedback("");
-    setFeedbackType("");
-
-    // Basic validation
-    if (!formData.name || !formData.email || !formData.message) {
-      setFeedback("Please fill in all required fields.");
-      setFeedbackType("error");
-      setIsSubmitting(false);
-      return;
-    }
-
-    // Email validation
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    if (!emailRegex.test(formData.email)) {
-      setFeedback("Please enter a valid email address.");
-      setFeedbackType("error");
-      setIsSubmitting(false);
-      return;
-    }
-
-    try {
-      const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/send`, {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-          name: formData.name,
-          email: formData.email,
-          subject: formData.subject,
-          content: formData.message,
-        }),
-      });
-
-      if (!response.ok) {
-        throw new Error("Failed to send message");
-      }
-
-      setFeedback("Message sent successfully! I'll get back to you soon.");
-      setFeedbackType("success");
-
-      // Reset form
-      setFormData({
-        name: "",
-        email: "",
-        subject: "",
-        message: "",
-      });
-    } catch (error) {
-      setFeedback("Something went wrong. Please try again later.");
-      setFeedbackType("error");
-    } finally {
-      setIsSubmitting(false);
-    }
+    // e.preventDefault();
+    // setIsSubmitting(true);
+    // setFeedback("");
+    // setFeedbackType("");
+    // // Basic validation
+    // if (!formData.name || !formData.email || !formData.message) {
+    //   setFeedback("Please fill in all required fields.");
+    //   setFeedbackType("error");
+    //   setIsSubmitting(false);
+    //   return;
+    // }
+    // // Email validation
+    // const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    // if (!emailRegex.test(formData.email)) {
+    //   setFeedback("Please enter a valid email address.");
+    //   setFeedbackType("error");
+    //   setIsSubmitting(false);
+    //   return;
+    // }
+    // try {
+    //   const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/send`, {
+    //     method: "POST",
+    //     headers: {
+    //       "Content-Type": "application/json",
+    //     },
+    //     body: JSON.stringify({
+    //       name: formData.name,
+    //       email: formData.email,
+    //       subject: formData.subject,
+    //       content: formData.message,
+    //     }),
+    //   });
+    //   if (!response.ok) {
+    //     throw new Error("Failed to send message");
+    //   }
+    //   setFeedback("Message sent successfully! I'll get back to you soon.");
+    //   setFeedbackType("success");
+    //   // Reset form
+    //   setFormData({
+    //     name: "",
+    //     email: "",
+    //     subject: "",
+    //     message: "",
+    //   });
+    // } catch (error) {
+    //   setFeedback("Something went wrong. Please try again later.");
+    //   setFeedbackType("error");
+    // } finally {
+    //   setIsSubmitting(false);
+    // }
   };
 
   return (
