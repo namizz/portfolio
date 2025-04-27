@@ -1,80 +1,54 @@
 import React from "react";
 import { FloatingDock } from "../FooterComp";
-import {
-  IconBrandGithub,
-  IconBrandX,
-  IconExchange,
-  IconHome,
-  IconNewSection,
-  IconTerminal2,
-} from "@tabler/icons-react";
+import { FaGithub, FaLinkedin } from "react-icons/fa";
+import { SiGmail } from "react-icons/si";
+import { RiTelegram2Fill } from "react-icons/ri";
+import { FaUpwork } from "react-icons/fa6";
 
-export function FloatingDockDemo() {
+const FloatingDockDemo = () => {
   const links = [
-    {
-      title: "Home",
-      icon: (
-        <IconHome className="h-full w-full text-neutral-500 dark:text-neutral-300" />
-      ),
-      href: "#",
-    },
-
-    {
-      title: "Products",
-      icon: (
-        <IconTerminal2 className="h-full w-full text-neutral-500 dark:text-neutral-300" />
-      ),
-      href: "#",
-    },
-    {
-      title: "Components",
-      icon: (
-        <IconNewSection className="h-full w-full text-neutral-500 dark:text-neutral-300" />
-      ),
-      href: "#",
-    },
-    {
-      title: "Aceternity UI",
-      icon: (
-        <img
-          src="https://assets.aceternity.com/logo-dark.png"
-          width={20}
-          height={20}
-          alt="Aceternity Logo"
-        />
-      ),
-      href: "#",
-    },
-    {
-      title: "Changelog",
-      icon: (
-        <IconExchange className="h-full w-full text-neutral-500 dark:text-neutral-300" />
-      ),
-      href: "#",
-    },
-
-    {
-      title: "Twitter",
-      icon: (
-        <IconBrandX className="h-full w-full text-neutral-500 dark:text-neutral-300" />
-      ),
-      href: "#",
-    },
     {
       title: "GitHub",
       icon: (
-        <IconBrandGithub className="h-full w-full text-neutral-500 dark:text-neutral-300" />
+        <FaGithub className="h-full w-full text-neutral-700 dark:text-neutral-300" />
       ),
-      href: "#",
+      href: "https://github.com/namizz",
+    },
+    {
+      title: "Gmail",
+      icon: (
+        <SiGmail className="h-full w-full text-red-400 dark:text-red-500" />
+      ),
+      href: "mailto:naomizerfu@gmail.com",
+    },
+    {
+      title: "Telegram",
+      icon: (
+        <RiTelegram2Fill className="h-full w-full text-sky-500 dark:text-sky-400" />
+      ),
+      href: "https://t.me/naomizerfu",
+    },
+    {
+      title: "LinkedIn",
+      icon: (
+        <FaLinkedin className="h-full w-full text-blue-500 dark:text-blue-300" />
+      ),
+      href: "https://www.linkedin.com/in/naomi-zerfu-705045333",
+    },
+    {
+      title: "Upwork",
+      icon: (
+        <FaUpwork className="h-full w-full text-green-600 dark:text-green-500" />
+      ),
+      href: "https://www.upwork.com/freelancers/~0127b7b761e3bb2314",
     },
   ];
+
   return (
-    <div className="flex items-center justify-center h-[35rem] w-full">
-      <FloatingDock
-        // only for demo, remove for production
-        mobileClassName="translate-y-20"
-        items={links}
-      />
+    <div className="flex items-center justify-center w-full">
+      <FloatingDock mobileClassName="translate-y-20" items={links} />
     </div>
   );
-}
+};
+
+export default FloatingDockDemo;

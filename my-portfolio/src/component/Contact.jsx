@@ -2,6 +2,7 @@ import { FaGithub, FaLinkedin } from "react-icons/fa";
 import { SiGmail } from "react-icons/si";
 import { RiTelegram2Fill } from "react-icons/ri";
 import { FaUpwork } from "react-icons/fa6";
+import FloatingDockDemo from "./container/Footer";
 
 const SocialIcons = () => {
   return (
@@ -57,7 +58,11 @@ const Contact = () => {
       <h2 className="text-2xl md:text-3xl xl:text-5xl mb-4">
         You can reach out to me on social media and explore my work:
       </h2>
-      <SocialIcons />
+      <div className="my-4">
+        <FloatingDockDemo />
+      </div>
+
+      {/* <SocialIcons /> */}
       <p className="text-2xl md:text-3xl xl:text-5xl">Let's Work Together</p>
       {/* <p className="mt-6 text-lg">
         Reminder: My speciality is on front-end, but I can also do backend very well. So,

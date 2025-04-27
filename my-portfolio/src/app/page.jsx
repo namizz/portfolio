@@ -6,6 +6,7 @@ import Project from "../component/container/ProjectSection";
 import Main from "../component/container/Home";
 import Background from "../component/container/Background";
 import NavbarDemo from "../component/container/NavContainer";
+import FloatingDockDemo from "../component/container/Footer";
 
 export default function Home() {
   return (
@@ -39,7 +40,7 @@ export default function Home() {
           </div>
         </div>
       </Background>
-      {/* <Background /> */}
+      <FloatingDockDemo />
     </div>
   );
 }

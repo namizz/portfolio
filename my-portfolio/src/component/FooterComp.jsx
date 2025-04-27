@@ -1,9 +1,9 @@
+"use client";
 /**
  * Note: Use position fixed according to your needs
  * Desktop navbar is better positioned at the bottom
  * Mobile navbar is better positioned at bottom right.
  **/
-
 import { cn } from "../../lib/utils";
 import { IconLayoutNavbarCollapse } from "@tabler/icons-react";
 import {
@@ -81,7 +81,7 @@ const FloatingDockDesktop = ({ items, className }) => {
       onMouseMove={(e) => mouseX.set(e.pageX)}
       onMouseLeave={() => mouseX.set(Infinity)}
       className={cn(
-        "mx-auto hidden h-16 items-end gap-4 rounded-2xl bg-gray-50 px-4 pb-3 md:flex dark:bg-neutral-900",
+        "mx-auto hidden h-16 items-end gap-4 rounded-2xl px-4 pb-3 md:flex dark:bg-neutral-900",
         className
       )}
     >
@@ -101,14 +101,14 @@ function IconContainer({ mouseX, title, icon, href }) {
     return val - bounds.x - bounds.width / 2;
   });
 
-  let widthTransform = useTransform(distance, [-150, 0, 150], [40, 80, 40]);
-  let heightTransform = useTransform(distance, [-150, 0, 150], [40, 80, 40]);
+  let widthTransform = useTransform(distance, [-150, 0, 150], [60, 100, 60]);
+  let heightTransform = useTransform(distance, [-150, 0, 150], [60, 100, 60]);
 
-  let widthTransformIcon = useTransform(distance, [-150, 0, 150], [20, 40, 20]);
+  let widthTransformIcon = useTransform(distance, [-150, 0, 150], [30, 50, 30]);
   let heightTransformIcon = useTransform(
     distance,
     [-150, 0, 150],
-    [20, 40, 20]
+    [30, 50, 30]
   );
 
   let width = useSpring(widthTransform, {
@@ -142,7 +142,7 @@ function IconContainer({ mouseX, title, icon, href }) {
         style={{ width, height }}
         onMouseEnter={() => setHovered(true)}
         onMouseLeave={() => setHovered(false)}
-        className="relative flex aspect-square items-center justify-center rounded-full bg-gray-200 dark:bg-neutral-800"
+        className="relative flex aspect-square items-center justify-center rounded-full bg-gray-100 dark:bg-neutral-800"
       >
         <AnimatePresence>
           {hovered && (
