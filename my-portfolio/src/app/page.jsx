@@ -5,6 +5,7 @@ import Project from "../component/container/ProjectSection";
 import Main from "../component/container/Home";
 import Background from "../component/container/Background";
 import NavbarDemo from "../component/container/NavContainer";
+import ContactSection from "../component/container/DM";
 
 export default function Home() {
   return (
@@ -21,16 +22,17 @@ export default function Home() {
           </div>
         </div>
       </Background>
+
       <Background>
         <div className="max-w-[1100px] w-full mx-auto my-10 px-4 lg:px-6 xl:px-0">
           <div id="skills">
             <Skill />
           </div>
+          <Achivement />
         </div>
       </Background>
       <Background>
         <div className="max-w-[1100px] w-full mx-auto my-10 px-4 lg:px-6 xl:px-0">
-          <Achivement />
           <div id="contact">
             <Contact />
           </div>

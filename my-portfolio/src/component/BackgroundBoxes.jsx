@@ -37,7 +37,7 @@ export const BoxesCore = ({ className, ...rest }) => {
       {rows.map((_, i) => (
         <motion.div
           key={`row` + i}
-          className="relative h-8 w-16 border-l border-slate-500 opacity-20"
+          className="relative h-8 w-16 border-l border-[rgba(100,116,139,0.3)] opacity-50"
         >
           {cols.map((_, j) => (
             <motion.div
@@ -46,7 +46,7 @@ export const BoxesCore = ({ className, ...rest }) => {
                 transition: { duration: 0 },
               }}
               key={`col` + j}
-              className="relative h-8 w-16 border-t border-r border-slate-500"
+              className="relative h-8 w-16 border-t border-r border-[#64748b57]"
             ></motion.div>
           ))}
         </motion.div>

@@ -3,6 +3,7 @@ import { SiGmail } from "react-icons/si";
 import { RiTelegram2Fill } from "react-icons/ri";
 import { FaUpwork } from "react-icons/fa6";
 import FloatingDockDemo from "./container/Footer";
+import ContactSection from "./container/DM";
 
 const SocialIcons = () => {
   return (
@@ -54,8 +55,9 @@ const SocialIcons = () => {
 
 const Contact = () => {
   return (
-    <div className="my-25 md:my-50 lg:my-60 flex flex-col justify-center items-center text-center ">
-      <h2 className="text-2xl md:text-3xl xl:text-5xl mb-4">
+    <div className="my-10 md:my-30 lg:my-40 flex flex-col justify-center items-center text-center text-slate-700">
+      <div></div>
+      <h2 className="text-2xl md:text-3xl xl:text-5xl mb-4 x">
         You can reach out to me on social media and explore my work:
       </h2>
       <div className="my-4">
@@ -63,7 +65,12 @@ const Contact = () => {
       </div>
 
       {/* <SocialIcons /> */}
-      <p className="text-2xl md:text-3xl xl:text-5xl">Let's Work Together</p>
+      <p className="text-2xl md:text-3xl xl:text-5xl mb-20">
+        Let's Work Together
+      </p>
+      <div className="p-5 text-left">
+        <ContactSection />
+      </div>
       {/* <p className="mt-6 text-lg">
         Reminder: My speciality is on front-end, but I can also do backend very well. So,
         let's work together!
