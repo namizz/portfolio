@@ -117,7 +117,7 @@ const Timeline = ({ data }) => {
                       <h4 className="text-lg font-semibold text-neutral-700">
                         More Detail:
                       </h4>
-                      <ul className="list-disc pl-2 text-blue-500">
+                      <ul className="inline-block relative z-10 border list-disc pl-2 text-blue-500">
                         {item.references.map((ref, refIndex) => (
                           <li key={refIndex}>
                             <a
