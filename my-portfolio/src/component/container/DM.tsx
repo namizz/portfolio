@@ -88,7 +88,8 @@ const ContactSection = () => {
         subject: "",
         message: "",
       });
-    } catch (_) {
+    } catch (error) {
+      console.error(error);
       setFeedback("Something went wrong. Please try again later.");
       setFeedbackType("error");
     } finally {
