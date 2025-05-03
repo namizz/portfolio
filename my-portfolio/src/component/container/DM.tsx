@@ -43,7 +43,6 @@ const ContactSection = () => {
     setIsSubmitting(true);
     setFeedback("");
     setFeedbackType("");
-
     if (!formData.name || !formData.email || !formData.message) {
       setFeedback("Please fill in all required fields.");
       setFeedbackType("error");
@@ -59,19 +58,23 @@ const ContactSection = () => {
       return;
     }
 
+    console.log(process.env.REACT_APP_BACKEND);
     try {
-      const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/send`, {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-          name: formData.name,
-          email: formData.email,
-          subject: formData.subject,
-          message: formData.message,
-        }),
-      });
+      const response = await fetch(
+        `https://portfolio-backend-cczx.onrender.com/send`,
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({
+            name: formData.name,
+            email: formData.email,
+            subject: formData.subject,
+            message: formData.message,
+          }),
+        }
+      );
 
       if (!response.ok) {
         throw new Error("Failed to send message");
