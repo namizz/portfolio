@@ -46,17 +46,17 @@ const ProjectCard = ({
 
   return (
     <div
-      className={`relative z-10 bg-white opacity-80 border-1 p-1 pb-0 border-[#00000018] shadow-sm flex my-8`}
+      className={`relative z-10 bg-white opacity-80 border-1 p-1 pb-0 border-[#00000018] shadow-sm md:flex my-8`}
     >
       <div>
         <img
           src={images[currentIndex]}
           alt={`slide-${currentIndex}`}
-          className={`border-1 border-[${buttonColor}] p-1 w-65 h-65 object-contain cursor-pointer transition-opacity duration-500`}
+          className={`border-1 border-[${buttonColor}] p-1 mx-6 md:mx-0 w-[90%] h-[90%] md:w-60 md:h-60 object-contain cursor-pointer transition-opacity duration-500`}
           style={{ borderColor: `${buttonColor}50` }}
           onClick={handleImageClick}
         />
-        <div className="flex justify-between">
+        <div className="flex justify-around md:justify-between">
           <PlayPause
             isPlaying={isPlaying}
             buttonColor={buttonColor}
@@ -76,7 +76,7 @@ const ProjectCard = ({
           <div className="w-14"></div>
         </div>
       </div>
-      <div className="flex flex-col px-6 w-[70%]">
+      <div className="flex flex-col px-6 md:w-[70%]">
         <div>
           <h2
             className={`px-3 mt-4 text-3xl font-bold ${titleFont.className}`}

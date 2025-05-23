@@ -23,7 +23,7 @@ const NavbarDemo = () => {
       link: "#project",
     },
     {
-      name: "Skills",
+      name: "Contact",
       link: "#contact",
     },
   ];
@@ -48,8 +48,7 @@ const NavbarDemo = () => {
           </div>
         </NavBody>
 
-        {/* Mobile Navigation */}
-        <MobileNav>
+        <MobileNav className="flex lg:hidden">
           <MobileNavHeader>
             <NavbarLogo />
             <MobileNavToggle
@@ -62,31 +61,41 @@ const NavbarDemo = () => {
             isOpen={isMobileMenuOpen}
             onClose={() => setIsMobileMenuOpen(false)}
           >
-            {navItems.map((item, idx) => (
-              <a
-                key={`mobile-link-${idx}`}
-                href={item.link}
-                onClick={() => setIsMobileMenuOpen(false)}
-                className="relative text-neutral-600 dark:text-neutral-300"
-              >
-                <span className="block">{item.name}</span>
-              </a>
-            ))}
-            <div className="flex w-full flex-col gap-4">
+            {navItems.map((item, idx) => {
+              const handleMobileClick = (e) => {
+                if (item.link.startsWith("#")) {
+                  e.preventDefault();
+                  const id = item.link.substring(1);
+                  const el = document.getElementById(id);
+                  if (el) {
+                    window.scrollTo({
+                      top: el.offsetTop - 60, // adjust offset
+                      behavior: "smooth",
+                    });
+                  }
+                }
+                setIsMobileMenuOpen(false); // close menu
+              };
+
+              return (
+                <a
+                  key={`mobile-link-${idx}`}
+                  href={item.link}
+                  onClick={handleMobileClick}
+                  className="relative text-neutral-600 dark:text-neutral-300"
+                >
+                  <span className="block">{item.name}</span>
+                </a>
+              );
+            })}
+
+            <div className="flex items-center gap-4">
               <NavbarButton
-                onClick={() => setIsMobileMenuOpen(false)}
+                text="Download CV"
+                href="/Resume.pdf"
                 variant="primary"
-                className="w-full"
-              >
-                Login
-              </NavbarButton>
-              <NavbarButton
-                onClick={() => setIsMobileMenuOpen(false)}
-                variant="primary"
-                className="w-full"
-              >
-                Book a call
-              </NavbarButton>
+                download
+              />
             </div>
           </MobileNavMenu>
         </MobileNav>

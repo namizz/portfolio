@@ -55,9 +55,9 @@ const SocialIcons = () => {
 
 const Contact = () => {
   return (
-    <div className="my-10 md:my-30 lg:my-40 flex flex-col justify-center items-center text-center text-slate-700">
+    <div className="my-30 lg:my-40 flex flex-col justify-center items-center text-center text-slate-700">
       <div></div>
-      <h2 className="text-2xl md:text-3xl xl:text-5xl mb-4 x">
+      <h2 className="text-3xl md:text-4xl xl:text-5xl mb-4 ">
         You can reach out to me on social media and explore my work:
       </h2>
       <div className="my-4">
@@ -68,7 +68,7 @@ const Contact = () => {
       <p className="text-2xl md:text-3xl xl:text-5xl mb-20">
         Let's Work Together
       </p>
-      <div className="p-5 text-left">
+      <div className="sm:p-5 text-left">
         <ContactSection />
       </div>
       {/* <p className="mt-6 text-lg">

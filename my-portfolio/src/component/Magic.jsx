@@ -17,7 +17,7 @@ const MagicWand = () => {
   };
 
   return (
-    <div className="">
+    <div className="hidden md:block">
       <button
         className="w-18 h-18 p-0 border-none bg-transparent"
         onMouseEnter={handleMouseEnter}

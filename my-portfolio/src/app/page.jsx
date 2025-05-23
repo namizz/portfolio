@@ -13,7 +13,7 @@ export default function Home() {
       <NavbarDemo />
 
       <Background>
-        <div className="max-w-[1100px] w-full mx-auto pb-10 pt-30 px-4 lg:px-6 xl:px-0">
+        <div className="max-w-[1100px] w-full mx-auto pb-10 pt-10 sm:pt-30 px-4 lg:px-6 xl:px-0">
           <div id="main">
             <Main />
           </div>
