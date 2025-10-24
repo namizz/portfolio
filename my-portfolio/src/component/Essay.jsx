@@ -25,11 +25,13 @@ const Essay = () => {
       </div>
 
       <p className="-top-3 text-base xl:text-lg">
-        A front-end web developer passionate about building attractive and
-        interactive web experiences. I strive to deliver clean, complete work
-        that ensures client satisfaction. With a keen eye for detail, I
-        meticulously refine every component to achieve precision and quality in
-        all aspects of my work.
+        A Full-Stack Web Developer specializing in Next.js and React. I build
+        responsive, high-performing web applications that help businesses grow
+        and engage users effectively. Beyond the front end, I develop reliable
+        APIs and server logic using Go, Java, and Express.js to ensure seamless
+        performance across the stack. I focus on delivering clean, scalable, and
+        maintainable code — always aiming for precision, quality, and client
+        satisfaction.
       </p>
       <div className="p-2">
         <GradientButton />
