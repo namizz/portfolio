@@ -9,7 +9,7 @@ import NavbarDemo from "../component/container/NavContainer";
 
 export default function Home() {
   return (
-    <div className="dark">
+    <div className="">
       <NavbarDemo />
 
       <Background>

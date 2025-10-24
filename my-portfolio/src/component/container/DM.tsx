@@ -98,10 +98,10 @@ const ContactSection = () => {
   };
 
   return (
-    <Card className="relative bg-[#ffffff83] dark:bg-gray-900 border-gray-200 dark:border-gray-800 border">
+    <Card className="relative bg-[#ffffff83]  border-gray-200  border">
       <CardHeader>
         <CardTitle className="text-slate-600">Contact me Here</CardTitle>
-        <CardDescription className="text-gray-800 dark:text-gray-400">
+        <CardDescription className="text-gray-800 ">
           I&apos;ll get back to you as soon as possible.
         </CardDescription>
       </CardHeader>
@@ -118,7 +118,7 @@ const ContactSection = () => {
                   id="name"
                   value={formData.name}
                   onChange={handleChange}
-                  className="w-full px-3 py-2 bg-gray-50 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-md focus:outline-none focus:ring-2 focus:ring-slate-500"
+                  className="w-full px-3 py-2 bg-gray-50  border border-gray-200  rounded-md focus:outline-none focus:ring-2 focus:ring-slate-500"
                   required
                 />
               </div>
@@ -131,7 +131,7 @@ const ContactSection = () => {
                   type="email"
                   value={formData.email}
                   onChange={handleChange}
-                  className="w-full px-3 py-2 bg-gray-50 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-md focus:outline-none focus:ring-2 focus:ring-slate-500"
+                  className="w-full px-3 py-2 bg-gray-50  border border-gray-200  rounded-md focus:outline-none focus:ring-2 focus:ring-slate-500"
                   required
                 />
               </div>
@@ -144,7 +144,7 @@ const ContactSection = () => {
                 id="subject"
                 value={formData.subject}
                 onChange={handleChange}
-                className="w-full px-3 py-2 bg-gray-50 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-md focus:outline-none focus:ring-2 focus:ring-slate-500"
+                className="w-full px-3 py-2 bg-gray-50  border border-gray-200  rounded-md focus:outline-none focus:ring-2 focus:ring-slate-500"
               />
             </div>
             <div className="space-y-2">
@@ -156,7 +156,7 @@ const ContactSection = () => {
                 rows={4}
                 value={formData.message}
                 onChange={handleChange}
-                className="w-full px-3 py-2 bg-gray-50 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-md focus:outline-none focus:ring-2 focus:ring-slate-500"
+                className="w-full px-3 py-2 bg-gray-50  border border-gray-200  rounded-md focus:outline-none focus:ring-2 focus:ring-slate-500"
                 required
               />
             </div>

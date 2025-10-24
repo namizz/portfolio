@@ -9,37 +9,27 @@ const FloatingDockDemo = () => {
   const links = [
     {
       title: "GitHub",
-      icon: (
-        <FaGithub className="h-full w-full text-neutral-700 dark:text-neutral-300" />
-      ),
+      icon: <FaGithub className="h-full w-full text-neutral-700 " />,
       href: "https://github.com/namizz",
     },
     {
       title: "Gmail",
-      icon: (
-        <SiGmail className="h-full w-full text-red-400 dark:text-red-500" />
-      ),
+      icon: <SiGmail className="h-full w-full text-red-400 " />,
       href: "mailto:naomizerfu@gmail.com",
     },
     {
       title: "Telegram",
-      icon: (
-        <RiTelegram2Fill className="h-full w-full text-sky-500 dark:text-sky-400" />
-      ),
+      icon: <RiTelegram2Fill className="h-full w-full text-sky-500 " />,
       href: "https://t.me/naomizerfu",
     },
     {
       title: "LinkedIn",
-      icon: (
-        <FaLinkedin className="h-full w-full text-blue-500 dark:text-blue-300" />
-      ),
+      icon: <FaLinkedin className="h-full w-full text-blue-500 " />,
       href: "https://www.linkedin.com/in/naomi-zerfu-705045333",
     },
     {
       title: "Upwork",
-      icon: (
-        <FaUpwork className="h-full w-full text-green-600 dark:text-green-500" />
-      ),
+      icon: <FaUpwork className="h-full w-full text-green-600 " />,
       href: "https://www.upwork.com/freelancers/~0127b7b761e3bb2314",
     },
   ];
