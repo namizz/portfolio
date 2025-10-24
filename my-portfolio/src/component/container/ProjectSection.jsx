@@ -65,11 +65,32 @@ const Project = () => {
     ],
     source: "https://github.com/namizz/Food-Recipes",
   };
+  const JobMate = {
+    images: [
+      "/JobMate/pic1.png",
+      "/JobMate/pic2.png",
+      "/JobMate/pic3.png",
+      "/JobMate/pic4.png",
+      "/JobMate/pic5.png",
+      "/JobMate/pic6.png",
+      "/JobMate/pic7.png",
+    ],
+    title: "JobMate",
+    description:
+      "JobMate is a web app that helps job seekers enhance their careers with four core features: CV Review, Find Job, Interview Practice, and Career Tips. It supports both English and Amharic, making it accessible to users in Ethiopia and beyond. Users can review their CVs, practice interviews, explore jobs, and access offline career advice.",
+    buttonColor: "#007bff",
+    color: "#007bff",
+    tools: ["React", "Next.js", "TypeScript", "Go"],
+    source: "",
+    liveDemo: "https://jobmate-kappa.vercel.app/",
+  };
+
   return (
     <div>
       <div className="text-4xl font-bold text-[#0a0a0ad2]">My Projects</div>
       <ProjectCard {...Efood} />
       <ProjectCard {...Fellow} />
+      <ProjectCard {...JobMate} />
       <ProjectCard {...FoodRecipe} />
     </div>
   );
