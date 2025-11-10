@@ -89,7 +89,7 @@ const Project = () => {
     <div>
       <div className="text-4xl font-bold text-[#0a0a0ad2]">My Projects</div>
       <ProjectCard {...Efood} />
-      <ProjectCard {...Fellow} />
+      {/* <ProjectCard {...Fellow} /> */}
       <ProjectCard {...JobMate} />
       <ProjectCard {...FoodRecipe} />
     </div>
